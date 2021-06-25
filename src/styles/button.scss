@@ -20,6 +20,18 @@
     margin-right: 8px;
   }
 
+  &.outlined {
+    transition: 0.2s;
+    background: #fff;
+    border: 1px solid #835afd;
+    color: #835afd;
+  }
+  &.outlined:hover {
+    background: #835afd;
+    border: 1px solid #835afd;
+    color: #fff;
+  }
+
   &:not(:disabled):hover{
     filter: brightness(0.9);
   }
