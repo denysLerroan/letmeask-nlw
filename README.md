@@ -12,7 +12,7 @@
 
 -----
 
-> ### Technologies
+### Technologies
 * ReactJS 
 * Typescript
 * Sass
