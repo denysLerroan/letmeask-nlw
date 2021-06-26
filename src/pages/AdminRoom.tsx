@@ -5,6 +5,7 @@ import logoImg from '../assets/images/logo.svg'
 import deleteImg from '../assets/images/delete.svg'
 import checkImg from '../assets/images/check.svg'
 import answerImg from '../assets/images/answer.svg'
+import emptyImg from '../assets/images/empty-questions.svg'
 
 import { RoomCode } from '../components/RoomCode'
 
@@ -71,6 +72,13 @@ export function AdminRoom(){
         </div>
 
         <div className="question-list">
+          {questions.length === 0 && (
+            <div className="questions-empty">
+              <img src={emptyImg} alt="Nenhuma pergunta" />
+              <h2>Nenhuma pergunta por aqui...</h2>
+              <p>Compartilhe o código da sala com os seus viewers e comece a responder perguntas!</p>
+            </div>
+          )}
           {questions.map(question => {
             return (
               <Question
@@ -80,6 +88,7 @@ export function AdminRoom(){
                 isAnswered={question.isAnswered}
                 isHighLighted={question.isHighLighted}
               >
+
                 {!question.isAnswered &&(
                   <>
                     <button
@@ -108,6 +117,5 @@ export function AdminRoom(){
         </div>
       </main>
     </div>
-
   )
 }
