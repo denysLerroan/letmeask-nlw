@@ -108,6 +108,32 @@
 
     .question-list{
       margin-top: 24px;
+
+      .questions-empty{
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        margin: 42px 0;
+        color: #29292e;
+
+        > img {
+          width: 200px;
+          margin: 16px 0;
+        }
+
+        > h2{
+          font-size: 32px;
+          margin-bottom: 16px;
+        }
+
+        > p {
+          font-size: 18px;
+          max-width: 500px;
+          display: block;
+          margin: 0 auto;
+        }
+        
+
+      }
     }
   }
 }
